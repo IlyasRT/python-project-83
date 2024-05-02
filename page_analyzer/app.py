@@ -12,4 +12,6 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 @app.route('/')
 def hello_world():
-    return 'Проверка --> Welcome to Flask!'
+    # return 'Проверка --> Welcome to Flask!'
+    return render_template('index.html')
+    
