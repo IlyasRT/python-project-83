@@ -1,0 +1,15 @@
+__pycache__
+.venv
+.venv/
+.idea
+.idea/
+.pyc
+dist
+dist/
+*.pyc
+tests
+.pytest_cache
+*.cast
+coverage
+.coverage
+coverage.xml
