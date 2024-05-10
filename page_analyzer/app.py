@@ -13,6 +13,7 @@ app.config['DATABASE_URL'] = os.getenv('DATABASE_URL')
 try:
     # пытаемся подключиться к базе данных
     conn = psycopg2.connect(app.config['DATABASE_URL'])
+    print('Establish connection to database')
 except:
     # в случае сбоя подключения будет выведено сообщение  в STDOUT
     print('Can`t establish connection to database')
