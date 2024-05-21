@@ -29,6 +29,8 @@ try:
     # пытаемся подключиться к базе данных
     conn = psycopg2.connect(DATABASE_URL)
     print('Establish connection to database')
+    print('conn=',conn)
+    
 except:
     # в случае сбоя подключения будет выведено сообщение  в STDOUT
     print('Can`t establish connection to database')
