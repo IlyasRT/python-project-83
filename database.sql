@@ -5,4 +5,7 @@ CREATE TABLE urls (
 );
 
 
-insert into "urls" ("id", "name", "created_at") values ('1', 'hexlet.io', '2024-05-13');
+insert into "urls" ("id", "name", "created_at") values
+('1', 'hexlet.io', '2024-05-13'),
+('2', 'github.com', '2024-05-14'),
+('3', 'google.com', '2024-05-15');

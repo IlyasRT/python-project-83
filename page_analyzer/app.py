@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from dotenv import load_dotenv
 import os
 import psycopg2
+from psycopg2.extras import NamedTupleCursor
 from urllib.parse import urlparse
 
 load_dotenv()
@@ -11,8 +12,11 @@ app.config['DATABASE_URL'] = os.getenv('DATABASE_URL')
 try:
     # пытаемся подключиться к базе данных
     conn = psycopg2.connect(app.config['DATABASE_URL'])
+    print('conn=', conn)
+    cursor = conn.cursor()
+    print('cursor=',cursor)
     print('Establish connection to database')
-    # print('conn=',conn)
+
 
 except:
     # в случае сбоя подключения будет выведено сообщение  в STDOUT
