@@ -12,9 +12,9 @@ app.config['DATABASE_URL'] = os.getenv('DATABASE_URL')
 try:
     # пытаемся подключиться к базе данных
     conn = psycopg2.connect(app.config['DATABASE_URL'])
-    print('conn=', conn)
+    #print('conn=', conn)
     cursor = conn.cursor()
-    print('cursor=',cursor)
+    #print('cursor=',cursor)
     print('Establish connection to database')
 
 
@@ -28,8 +28,14 @@ def hello_world():
     # print(i)
     # return 'Проверка --> Welcome to Flask!'
     # return render_template('index.html')
-    return render_template('index2.html')
+    return render_template('index.html')
 
+@app.route('/urls')
+def fn_urls():
+    # print(i)
+    # return 'Проверка --> Welcome to Flask!'
+    # return render_template('index.html')
+    return render_template('urls.html')
 
 #  poetry run flask --app page_analyzer:app run
 #  poetry run flask --app page_analyzer:app run --debug
